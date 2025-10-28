@@ -1,7 +1,7 @@
 Hello World
-
-
-
+this is a haiku
+made for our cohort
+about coding
 This is a Haiku
 It is one I just wrote
 I hope you like it
