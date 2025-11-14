@@ -3,16 +3,16 @@ class BankAccount{
     // Shared resource (bank balance)
     private int balance = 1000;
 
-    // Synchronized method for deposit operation
-    public synchronized void deposit(int amount){
+    // Method for deposit operation
+    public void deposit(int amount){
 
         balance += amount;
         System.out.println("Deposited: " + amount
                 + ", Balance: " + balance);
     }
 
-    // Synchronized method for withdrawal operation
-    public synchronized void withdraw(int amount){
+    // Method for withdrawal operation
+    public void withdraw(int amount){
 
         if (balance >= amount) {
             balance -= amount;
@@ -30,7 +30,7 @@ class BankAccount{
 }
 
 // Main class
-public class Geeks{
+public class NoSync{
 
     public static void main(String[] args){
 
@@ -42,7 +42,7 @@ public class Geeks{
             for (int i = 0; i < 3; i++) {
                 account.deposit(200);
                 try {
-                    Thread.sleep(50); // Simulate some delay
+                    Thread.sleep(100); // Simulate some delay
                 }
                 catch (InterruptedException e) {
                     e.printStackTrace();
@@ -56,7 +56,7 @@ public class Geeks{
                 account.withdraw(100);
                 try {
                     Thread.sleep(
-                            100); // Simulate some delay
+                            200); // Simulate some delay
                 }
                 catch (InterruptedException e) {
                     e.printStackTrace();
