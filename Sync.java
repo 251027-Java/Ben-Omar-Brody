@@ -56,7 +56,7 @@ public class Sync{
                 account.withdraw(100);
                 try {
                     Thread.sleep(
-                            200); // Simulate some delay
+                            100); // Simulate some delay
                 }
                 catch (InterruptedException e) {
                     e.printStackTrace();
